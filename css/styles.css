@@ -707,12 +707,14 @@ body{
 }
 
 .images-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 70px;
     background-color: var(--images-overlay-background);
-    padding: 27px 82px;
 }
 
 .images-overlay-heading{
@@ -720,7 +722,6 @@ body{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
