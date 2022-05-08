@@ -7,7 +7,7 @@
 :root {
     --background-color: #ffff;
     --header-footer-background-color: #2F303A;
-    --images-overlay-background: rgba(47, 48, 58, 0.8);
+    --images-overlay-background: rgba(27, 46, 255, 0.8);
     --hover-color: #2196F3;
     --overlay-filter-color: rgba(33, 150, 243, 0.9);
     --button-hover-color: #188CE8;
@@ -77,6 +77,7 @@ img{
     height: 581px;
     background-color: var(--white-color);
     border-radius: 4px;
+    
 }
 
 .backdrop{
@@ -91,8 +92,11 @@ img{
     background-color: var(--backdrop-overlay-color);
     opacity: 1;
     visibility: visible;
-    transition: transform 250ms;
     transform: translate(-50% -50%);
+    transition-property: scale, opacity;
+    transition-delay: 0ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .close-button{
@@ -183,7 +187,14 @@ img{
 }
 
 .form-element{
+    display: block;
     color: var(--logo-black-color);
+    margin-bottom: 10px;
+}
+
+.comment-label{
+    display: block;
+    margin-bottom: 20px;
 }
 
 .form-element:hover {
@@ -200,7 +211,6 @@ img{
     height: 40px;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 10px;
     padding: 12px 12px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     color: var(--paragraph-color);
@@ -243,6 +253,9 @@ img{
     margin-bottom: 20px;
     padding: 12px 16px;
     color: var(--paragraph-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .comment-area::placeholder{
@@ -264,6 +277,9 @@ img{
     letter-spacing: 0.03em;
     display: block;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .checkbox{
@@ -285,7 +301,11 @@ img{
 }
 
 .checkbox-text{
-    display: inline-block;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .checkbox-group{
@@ -449,6 +469,7 @@ body{
 
 .footer-contacts{
     margin-right: 70px;
+    flex-grow: 1;
 }
 
 .footer-heading{
@@ -904,7 +925,6 @@ body{
     font-weight: 700;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    margin-right: 93px;
     transition-property: transform;
     transition-duration: 250ms;
     transition-delay: 0ms;
@@ -1010,7 +1030,6 @@ body{
 }
 
 .footer-socials{
-    padding-top: 12px;
     margin-right: 93px;
 }
 
@@ -1073,6 +1092,10 @@ body{
     display: flex;
 }
 
+.footer-label{
+    margin-right: 12px;
+}
+
 .footer-subscribe-form{
     width: 358px;
     height: 50px;
@@ -1080,8 +1103,7 @@ body{
     border: 1px solid var(--footer-form-border-color);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    margin-right: 12px;
+    border-radius: 4px;    
     padding: 15px 16px;
     color: var(--white-color);
     font-weight: 400;
