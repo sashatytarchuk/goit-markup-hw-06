@@ -7,7 +7,7 @@
 :root {
     --background-color: #ffff;
     --header-footer-background-color: #2F303A;
-    --images-overlay-background: rgba(27, 46, 255, 0.8);
+    --images-overlay-background: rgba(47, 48, 58, 0.8);
     --hover-color: #2196F3;
     --overlay-filter-color: rgba(33, 150, 243, 0.9);
     --button-hover-color: #188CE8;
