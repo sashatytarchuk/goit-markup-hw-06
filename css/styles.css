@@ -253,9 +253,6 @@ img{
     margin-bottom: 20px;
     padding: 12px 16px;
     color: var(--paragraph-color);
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
 }
 
 .comment-area::placeholder{
